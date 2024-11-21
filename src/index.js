@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Header from './layout/Header';  // .js 생략 가능
+import Footer from './layout/Footer';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // 라우터로 데이터(패킷)을 보내겠다.
+  <BrowserRouter>
+    {/* 컴포넌트로 화면이 구성됨 */}
+    <Header />
     <App />
-  </React.StrictMode>
+    <Footer />
+  </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
